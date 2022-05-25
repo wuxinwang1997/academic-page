@@ -70,6 +70,7 @@ categories:
 5. 确定边界区域
 
 设$A$是从函数空间$X$到函数空间$Y$的一个映射：
+
 {{< math >}}
 $$
 A: X \rightarrow Y
