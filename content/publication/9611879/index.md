@@ -9,7 +9,7 @@ authors:
 - Haodi Wang
 - Wen Chen
 - Peilong Yu
-- Wuxin Wang
+- admin
 - Wen Zhang
 - Kaijun Ren
 tags:
