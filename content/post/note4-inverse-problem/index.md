@@ -99,7 +99,7 @@ $$
   
   - 在许多反演求解中（特别四非线性反演求解中）需要进行正演计算。欲求解反演问题，首先必须假设相应的正演问题已经获得解决
   
-  $\color{red}{反问题的求解比正问题困难，且与正问题相关}$
+  {{< math >}}$\color{red}{反问题的求解比正问题困难，且与正问题相关}${{< math >}}
 
 - 反演问题的求解归结为最有估计问题，计算量很大
   
@@ -132,11 +132,11 @@ $$
 - 确定性方法
   
   - 最小二乘
-    
+    {{< math >}}
     $$
     Ax=b \quad A=(a_{ij})_{m \times n} \quad x=[x_1,\cdots,x_n]^T \quad b=[b_1,\cdots,b_m^T]
     $$
-    
+    {{< math >}}
     考虑$m > n$，超定，往往无解
     
     $J(x)=|Ax-b|^2=\min ! \Rightarrow \frac{\partial{J}}{\partial{x}}(\nabla_xJ)=0 \Rightarrow A'Ax=A'b$
