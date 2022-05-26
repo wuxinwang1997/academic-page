@@ -1,47 +1,34 @@
 ---
-title: 反问题课程笔记
-subtitle: 
+# Documentation: https://wowchemy.com/docs/managing-content/
 
-# Summary for listings and search engines
-summary: 反问题课程笔记
-
-# Link this post with a project
-projects: []
-
-# Date published
-date: "2022-03-14"
-
-# Date updated
-lastmod: "2022-05-25"
-
-# Is this an unpublished draft?
+title: "Note for Inverse Problem"
+subtitle: "反问题课程笔记"
+summary: ""
+authors: [admin]
+tags: [Academic, Data Assimilation, Math]
+categories: [Note]
+date: 2022-03-14T00:00:00+00:00
+lastmod: 2022-05-26T14:09:29+08:00
+featured: false
 draft: false
 
-# Show this page in the Featured widget?
-featured: false
-
 # Featured image
-# Place an image named `featured.jpg/png` in this page's folder and customize its options here.
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
+  caption: "Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)"
   focal_point: ""
-  placement: 2
   preview_only: false
 
-authors:
-- admin
-
-tags:
-- Academic
-- Data Assimilation
-- Machine Learning
-
-categories:
-- Note
-- 笔记
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
 ---
 
-##### 正问题与反问题的关系
+#### 正问题与反问题的关系
 
 一对问题称为是互逆的，如果一个问题的表述或处理需要另一个问题解的信息；若把其中的一个问题称为正问题，另一个就称为反问题。
 
@@ -71,11 +58,9 @@ categories:
 
 设$A$是从函数空间$X$到函数空间$Y$的一个映射：
 
-{{< math >}}
 $$
 A: X \rightarrow Y
 $$
-{{< /math >}}
 
 
 数学上$A$常称为算子，也即数学模型。
@@ -94,7 +79,7 @@ $$
 
 反问题通常是不适定的
 
-##### 反问题的求解特点
+#### 反问题的求解特点
 
 - 反演问题的求解与正问题密切相关
   
@@ -102,11 +87,11 @@ $$
   
   - 在许多反演求解中（特别四非线性反演求解中）需要进行正演计算。欲求解反演问题，首先必须假设相应的正演问题已经获得解决
   
-  {{< math >}}$\color{red}{反问题的求解比正问题困难，且与正问题相关}${{< math >}}
+  $\color{red}{反问题的求解比正问题困难，且与正问题相关}$
 
 - 反演问题的求解归结为最有估计问题，计算量很大
   
-  {{< math >}}$Ax=y, x \in X, y \in Y${{< math >}}
+  $Ax=y, x \in X, y \in Y$
   
   $A$是算子，$x$代表了初值、边界、物理参数等
   
@@ -128,21 +113,21 @@ $$
      
      解决办法：增加约束条件，构造稳定近似解
 
-##### 反问题的求解方法
+#### 反问题的求解方法
 
-###### 分类1：
+#### 分类1：
 
 - 确定性方法
   
   - 最小二乘
-    {{< math >}}
     $$
     Ax=b \quad A=(a_{ij})_{m \times n} \quad x=[x_1,\cdots,x_n]^T \quad b=[b_1,\cdots,b_m^T]
     $$
-    {{< math >}}
     考虑$m > n$，超定，往往无解
     
-    $J(x)=|Ax-b|^2=\min ! \Rightarrow \frac{\partial{J}}{\partial{x}}(\nabla_xJ)=0 \Rightarrow A'Ax=A'b$
+    $$
+    J(x)=|Ax-b|^2=\min ! \Rightarrow \frac{\partial{J}}{\partial{x}}(\nabla_xJ)=0 \Rightarrow A'Ax=A'b
+    $$
     
     解一定存在，但条件数$Cond(A)=\|A\|\|A^{-1}\|$很大，则解是不适定的
     
@@ -156,7 +141,7 @@ $$
     J(x) = \|x\|^2 - \lambda'(Ax-b)
     $$
     
-    $\lambda = \begin{matrix}\lambda_1\\ \vdots \\\lambda_m\end{matrix}$
+    $\lambda = \begin{matrix}\lambda_1\\\\ \vdots \\\\ \lambda_m\end{matrix}$
     
     是Lagrange乘子向量
     
@@ -172,11 +157,11 @@ $$
     
     $$
     \begin{aligned}
-\frac{\mathrm{d}X}{\mathrm{d}t} &= F(X), \Omega \\
-X(0) &= X_0 \\
-X|_P &= X_B \\
-Z &= K(X(t))+\varepsilon \quad \text{观测方程}
-\end{aligned}
+      \frac{\mathrm{d}X}{\mathrm{d}t} &= F(X), \Omega \\\\
+      X(0) &= X_0 \\\\
+      X|_P &= X_B \\\\
+      Z &= K(X(t))+\varepsilon \quad \text{观测方程}
+    \end{aligned}
     $$
     
     在$[0,T]$，$Z$有观测值，$Z^{obs}$，确定$X_0$（初始场）
@@ -202,14 +187,14 @@ Z &= K(X(t))+\varepsilon \quad \text{观测方程}
     $$
     P(x|y^{\delta})=\frac{P(y^{\delta}|x)P(x)}{P(y^\delta)}
     $$
-  
+
   - Kalman
     
     一个演化方程和观测方程
     
     如果$T > N-1$，如$T=N$，则称为Kalman预测（外推）
     
-    如果$T=N-1$，称为$Kalman$现报（滤波，估计）
+    如果$T=N-1$，称为Kalman现报（滤波，估计）
     
     如果$0 \leq T \leq N-1$，称为Kalman回报（平滑或内插）
     
@@ -223,7 +208,8 @@ Z &= K(X(t))+\varepsilon \quad \text{观测方程}
   
   - 深度学习
 
-###### 分类2
+
+#### 分类2
 
 - 线性反问题
 
@@ -233,7 +219,8 @@ Z &= K(X(t))+\varepsilon \quad \text{观测方程}
   
   - 非线性最小二乘法
 
-###### 分类3
+
+#### 分类3
 
 - 数值优化方法
   
@@ -243,7 +230,8 @@ Z &= K(X(t))+\varepsilon \quad \text{观测方程}
 
 - 解析方法
 
-###### 关于正则化参数的选取
+
+#### 关于正则化参数的选取
 
 - 先验给定：与数据误差水平$\delta$的一元函数
 
@@ -257,7 +245,8 @@ $C_L$方法
 
 $L$曲线方法
 
-##### 第4讲 最小二乘法解线性反问题
+
+### 第4讲 最小二乘法解线性反问题
 
 $Ax=b, A=(a_{ij})_{m \times n}$为实矩阵，$x = [x_1,\cdots,x_n]^T, b=[b_1,\cdots,b_m]^T$
 
@@ -283,7 +272,7 @@ $Ax=b, A=(a_{ij})_{m \times n}$为实矩阵，$x = [x_1,\cdots,x_n]^T, b=[b_1,\c
   
   $\hat{x}$的不确定性：$P=\left<(\hat{x}-x)(\hat{x}-x)^T\right>=A^T(AA^T)^{-1}\left<\varepsilon\varepsilon^T\right>(AA^T)^{-1}A$
 
-##### 第5讲 用SVD分解解线性反问题
+### 第5讲 用SVD分解解线性反问题
 
 $A=(a_{ij})_{m \times n}$为实矩阵，$A: R^n \rightarrow R^m$，秩$R(A)=l(>0)$，则一定存在$l$个正数$\sigma_0 \geq \sigma_1 \geq \cdots \geq \sigma_l \geq 0$，同时存在两组标准正交向量：$v_1,v_2,\cdots,v_n，u_1,u_2,\cdots,u_m$满足
 
@@ -299,14 +288,14 @@ $$
 则
 
 $$
-A=\sum^l_{i=1}\sigma_iu_iv_i^T=(u_1 \cdots u_n)\begin{bmatrix}\sigma_1 & \cdots & 0 \\
-0 & \ddots & 0\\ 
+A=\sum^l_{i=1}\sigma_iu_iv_i^T=(u_1 \cdots u_n)\begin{bmatrix}\sigma_1 & \cdots & 0 \\\\
+0 & \ddots & 0\\\\ 
 0 & \cdots & \sigma_l\end{bmatrix}(v_1^T \cdots v_m^T)^T
 $$
 
 物理意义：协方差矩阵将两个场联系起来，确定耦合模态
 
-###### 正则化思想的引入
+#### 正则化思想的引入
 
 一般来说，$Ax=b$都是欠定的，解不唯一，为了使解位移，引入一个所谓的第二函数（半范数），$\Omega(x)$，使$\Omega(x) = \min!$的解唯一
 
@@ -322,7 +311,7 @@ $L-$算子（求导算子）
 
 $L_0=I$（单位阵）
 
-$L_1=\frac{1}{\Delta x}\begin{bmatrix}-1&1&0&0&0\\0&-1&1&0&0\\0&0&\ddots&\ddots\end{bmatrix}$
+$L_1=\frac{1}{\Delta x}\begin{bmatrix}-1&1&0&0&0\\\\0&-1&1&0&0\\\\0&0&\ddots&\ddots\end{bmatrix}$
 
 $L_2$（二阶导数）
 
@@ -344,7 +333,7 @@ $I_{n \times n}=\sum^n_{i=1}v_iv_i^T$
 
 $$
 \begin{aligned}
-\lambda I+A^TA &= \lambda\sum^n_{i=1}v_iv_i^T+\sum^l_{i=1}\sigma^2_iv_iv_i^T \\
+\lambda I+A^TA &= \lambda\sum^n_{i=1}v_iv_i^T+\sum^l_{i=1}\sigma^2_iv_iv_i^T \\\\
 &= \sum^n_{i=1}(\lambda+\sigma^2_i)v_iv_i^T
 \end{aligned}
 $$
@@ -386,40 +375,45 @@ x &= [x_1,\cdots,x_n]^T
 \end{aligned}
 $$
 
-##### 第9讲 Kalman滤波类的估计
+### 第9讲 Kalman滤波类的估计
 
-###### 一 问题的提出：
+#### 一 问题的提出：
 
 两个方程
 
+{{< math >}}
 $$
 \begin{aligned}
-\mathbf{x} &= \mathbf{M}_{t:t-1}(\mathbf{x}_{t-1})+\xi_t & \xi_t\text{-随机噪声或状态变量中没有表示的部分} \\
-\mathbf{y}_t &= F_t(\mathbf{x}_t)+\varepsilon_t & \varepsilon_t\text{-观测误差} \\
-\mathbf{x_t}&\text{为}t\text{时刻状态参量}，&\mathbf{M}_{t:t-1}-\text{演化算子Propagator}，F_t是观测算子 \\
+\mathbf{x} &= \mathbf{M}_{t:t-1}(\mathbf{x}_{t-1})+\xi_t \quad \xi_t\text{-随机噪声或状态变量中没有表示的部分} \\\\
+\mathbf{y}_t &= F_t(\mathbf{x}_t)+\varepsilon_t \quad \varepsilon_t\text{-观测误差} \\\\
+\mathbf{x_t}&\text{为}t\text{时刻状态参量}，\quad \mathbf{M}_{t:t-1}-\text{演化算子Propagator}，F_t是观测算子 \\\\
 \xi_t,\varepsilon_t&统计特性已知
 \end{aligned}
 $$
+{{< math >}}
 
 已知前两个方程从时刻$t_0$开始观测，得到观测数据$Z(t)(t \geq t_0)$
 
 现在知道$t_0$到$t$时刻的观测值$Z(\sigma)$，找出$t_1$时刻$\mathbf{x}$的最优估计。$\hat{x}(t_1|t)$
 
-###### 二 （线性）Kalman滤波
+#### 二 （线性）Kalman滤波
 
 线性系统
 
+{{< math >}}
 $$
 \begin{aligned}
 \mathbf{x}_t &= \mathbf{M}_{t:t-1}\mathbf{x}_{t-1}+\xi_t \\
 \mathbf{y}_t &= \mathbf{K_t}\mathbf{x}_t+\varepsilon_t 
 \end{aligned}
 $$
+{{< math >}}
 
 设$t-1$时刻，$\mathbf{x}_{t-1}$有估计值$\hat{\mathbf{x}}_{t-1}$，误差协方差矩阵$\hat{S}_{t-1}$，$t$时刻观测$\mathbf{y}_t$已知，则$t$时刻的状态$\mathbf{x}_t$按下面的步骤计算
 
 step1 按照预报方程得到$t$时刻背景场（先验值）$\mathbf{x}^b_t$和协方差矩阵$B^b_t$
 
+{{< math >}}
 $$
 \begin{aligned}
 \mathbf{x}^b_t &= \mathbf{M}_{t:t-1}\hat{\mathbf{x}}_{t-1} \\
@@ -427,27 +421,32 @@ $$
 =\mathbf{M}_{t:t-1}\mathbf{B}^b_{t-1}\mathbf{M}_{t:t-1}^T
 \end{aligned}
 $$
+{{< math >}}
 
 step2 按照观测方程做出$t$时刻$\mathbf{x}_t$的最优估计$\hat{\mathbf{x}}_t$
 
+{{< math >}}
 $$
 \begin{aligned}
-\hat{\mathbf{x}_t} &= \mathbf{x}^b_t+\mathbf{G}_t(\mathbf{y}_t-\mathbf{K_t\mathbf{x}_t^b})\\
-\mathbf{S}_{\hat{\mathbf{x}}} &= (I-\mathbf{G}_t\mathbf{K_t})\mathbf{B}^b_t \\
+\hat{\mathbf{x}_t} &= \mathbf{x}^b_t+\mathbf{G}_t(\mathbf{y}_t-\mathbf{K_t\mathbf{x}_t^b})\\\\
+\mathbf{S}_{\hat{\mathbf{x}}} &= (I-\mathbf{G}_t\mathbf{K_t})\mathbf{B}^b_t \\\\
 \mathbf{G}_t &= \mathbf{B}^b_t\mathbf{K}'_t(\mathbf{K}_t \mathbf{B}_t^b \mathbf{K}‘_t + \mathbf{R})^{-1}
 \end{aligned}
 $$
+{{< math >}}
 
-###### 三 Extended Kalman Filter
+#### 三 Extended Kalman Filter
 
 考虑非线性系统，
 
+{{< math >}}
 $$
 \begin{aligned}
-\mathbf{x}_t &= \mathcal{M}_{t:t-1}(\mathbf{x}_{t-1})+\xi_t \\
+\mathbf{x}_t &= \mathcal{M}_{t:t-1}(\mathbf{x}_{t-1})+\xi_t \\\\
 \mathbf{y}_t &= F_t(\mathbf{x}_t)+\varepsilon_t
 \end{aligned}
 $$
+{{< math >}}
 
 已知$t-1$时刻$\mathbf{x}_{t-1}$的估计值为$\hat{\mathbf{x}}_{t-1}$，协防差矩阵$\hat{\mathbf{S}}_{t-1}$，$t$时刻观测$\mathbf{y}_t$已知，则$t$时刻$\mathbf{x}_t$的估计值可按下面的步骤计算、
 
@@ -455,6 +454,7 @@ step1 $t$时刻的先验估计$\mathbf{x}^b_t=\mathcal{M}_{t:t-1}(\hat{\mathbf{x
 
 下面对方程（模式）线性化
 
+{{< math >}}
 $$
 \begin{aligned}
 \mathbf{x}_t &= \mathcal{M}_{t:t-1}(\mathbf{x}_{t-1})+\xi_t \\
@@ -462,40 +462,49 @@ $$
 &\approx \mathcal{M}_{t:t-1}+\frac{\partial{\mathbf{M}}}{\partial{\mathbf{x}}}\big|_{\hat{\mathbf{x}_{t-1}}}(\mathbf{x}_t-\hat{\mathbf{x}}_{t-1})+\xi_t
 \end{aligned}
 $$
+{{< math >}}
 
+{{< math >}}
 $$
 \begin{aligned}
 \mathbf{x}_t-\mathbf{x}^b_t &= \frac{\partial{M}}{\partial{x}}|_{\hat{\mathbf{x}}_{t-1}}(\mathbf{x}_{t-1}-\hat{\mathbf{x}}_{t-1}) \\
 &=\mathbf{M}_{1t}(\mathbf{x}_{t-1}-\hat{\mathbf{x}}_{t-1})+\xi_t
 \end{aligned}
 $$
+{{< math >}}
 
 对应的协方差矩阵
 
+{{< math >}}
 $$
 \begin{aligned}
 \mathbf{S}^b_t &= \mathbb{E}[(\mathbf{x}_t-\mathbf{x}^b_t)(\mathbf{x}_t-\hat{\mathbf{x}}_{t})^T] \\
 &= \mathbf{M}_{1t}\hat{\mathbf{S}}_{t-1}\mathbf{M}_{1t}^T+\mathbf{S}_{\xi t}
 \end{aligned}
 $$
+{{< math >}}
 
 step2 观测方程线性化（在$\mathbf{x}_t^b$附近）
 
+{{< math >}}
 $$
 \begin{aligned}
-\mathbf{y}_t &= F_t(\mathbf{x}_t)+\varepsilon_t \\
-&= F_t(\mathbf{x}_t^b+\mathbf{x}_t-\mathbf{x^b_t})+\varepsilon_t \\
-&\approx F_t(\mathbf{x}^b_t)+\frac{\partial{F}_t}{\partial{x}}|_{\mathbf{x}^b_t}(\mathbf{x}_t-\mathbf{x}_t^b)+\varepsilon_t \\
+\mathbf{y}_t &= F_t(\mathbf{x}_t)+\varepsilon_t \\\\
+&= F_t(\mathbf{x}_t^b+\mathbf{x}_t-\mathbf{x^b_t})+\varepsilon_t \\\\
+&\approx F_t(\mathbf{x}^b_t)+\frac{\partial{F}_t}{\partial{x}}|_{\mathbf{x}^b_t}(\mathbf{x}_t-\mathbf{x}_t^b)+\varepsilon_t \\\\
 \mathbf{y_t}-F_t(\mathbf{x}^b_t) &= \mathbf{K}_{1t}(\mathbf{x}_t-\mathbf{x}_t^b)+\varepsilon_t
 \end{aligned}
 $$
+{{< math >}}
 
+{{< math >}}
 $$
 \begin{aligned}
-\hat{\mathbf{x}}_t &= \mathbf{x}^b_t+\mathbf{G}_t[\mathbf{y}_t-F_t(\mathbf{x_t^b})] \\
-\hat{\mathbf{S}}_t &= (\mathbf{I}-\mathbf{G_t}\mathbf{K}_{1t})\mathbf{S}^b_t \\
+\hat{\mathbf{x}}_t &= \mathbf{x}^b_t+\mathbf{G}_t[\mathbf{y}_t-F_t(\mathbf{x_t^b})] \\\\
+\hat{\mathbf{S}}_t &= (\mathbf{I}-\mathbf{G_t}\mathbf{K}_{1t})\mathbf{S}^b_t \\\\
 \mathbf{G_t} &= \mathbf{S}_t
 \end{aligned}
 $$
+{{< math >}}
 
 C.K. Wikle and L.M.Berliner, 2007. A Bayesian tutorial for data assimilation. Physica D.
