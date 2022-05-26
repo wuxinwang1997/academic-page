@@ -1,5 +1,5 @@
 
 [submodule "public"]
 	path = public
-	url = https://github.com/wuxinwang1997/wuxinwang1997.github.io.git
+	url = git@github.com:wuxinwang1997/wuxinwang1997.github.io.git
 	branch = master
