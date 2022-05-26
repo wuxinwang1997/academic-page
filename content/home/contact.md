@@ -15,32 +15,32 @@ content:
   # Automatically link email and phone or display as text?
   autolink: true
 
-  # Email form provider
-  form:
-    provider: netlify
-    formspree:
-      id:
-    netlify:
-      # Enable CAPTCHA challenge to reduce spam?
-      captcha: false
+  # # Email form provider
+  # form:
+  #   provider: netlify
+  #   formspree:
+  #     id:
+  #   netlify:
+  #     # Enable CAPTCHA challenge to reduce spam?
+  #     captcha: false
 
   # Contact details (edit or remove options as required)
   email: wuxinwang@nudt.edu.cn
   phone: +86 17267318526
-  # address:
-  #   street: 450 Serra Mall
-  #   city: Changsha
-  #   region: CA
-  #   postcode: '94305'
-  #   country: China
-  #   country_code: US
+  address:
+    # street: 450 Serra Mall
+    city: Changsha
+    region: Hunan
+    # postcode: '94305'
+    country: China
+    # country_code: US
   # coordinates:
   #   latitude: '37.4275'
   #   longitude: '-122.1697'
   # directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
-  # office_hours:
-  #   - 'Monday 10:00 to 13:00'
-  #   - 'Wednesday 09:00 to 10:00'
+  office_hours:
+    - 'Monday 09:00 to 17:00'
+    - 'Wednesday 09:00 to 178:00'
   # appointment_url: 'https://calendly.com'
   # contact_links:
   #   - icon: twitter
