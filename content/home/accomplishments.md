@@ -10,7 +10,7 @@ headless: true
 weight: 50
 
 # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-title: 'Accomplish&shy;ments'
+title: 'Honors and Awards'
 subtitle:
 
 # Date format
@@ -23,30 +23,24 @@ date_format: Jan 2006
 #   Leave other parameters empty if not required.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
-  - certificate_url: https://www.kaggle.com/whurobin/competitions
-    date_end: "2021-06-02"
-    date_start: "2021-05-05"
-    description: ""
-    organization: Kaggle
-    organization_url: https://www.kaggle.com/
-    title: Silver Medal in Kaggle Competition 'BirdCLEF-2021' Top 3% (18/848)
-    url: ""
-  - certificate_url: https://tianchi.aliyun.com/home/science/scienceDetail?spm=5176.12281920.0.0.73c53f74yIMgbF&userId=1095279409977
-    date_end: "2021-03-31"
-    date_start: "2021-02-03"
-    description: ""
-    organization: Alibaba Tianchi
-    organization_url: https://tianchi.aliyun.com/
-    title: Top 3% (74/2849) in Tianchi Competition 'AI Earth'
-    url: ""
-  - certificate_url: https://www.kaggle.com/whurobin/competitions
-    date_end: "2020-06-30"
-    date_start: "2020-04-01"
-    description: ""
-    organization: Kaggle
-    organization_url: https://www.kaggle.com/
-    title: Top 12% (259/2245) in Kaggle Competition 'Global Wheat Detection'
-    url: ""
+  - date_start: "2021-06-02"
+    title: 2021, Silver Medal in Kaggle Competition 'BirdCLEF-2021' Top 3% (18/848) 
+  - date_start: "2021-03-31"
+    title: 2020, Top 3% (74/2849) in Tianchi Competition 'AI Earth'
+  - date_start: "2020-06-30"
+    title: 2020, Top 12% (259/2245) in Kaggle Competition 'Global Wheat Detection'
+  - date_start: "2020-06-30"
+    title: 2020, Outstanding Bachelor's Degree Thesis of Wuhan University
+  - date_start: "2019-10-01"
+    title: 2019, Lei Jun Scholarship (雷军奖学金) (School of Remote Sensing and Information Engineering, Class of 2016, Top 1)
+  - date_start: "2019-08-01"
+    title: 2019, Second Prize of China Software Cup Student Software Design Competition (中国软件杯二等奖)
+  - date_start: "2019-06-01"
+    title: 2019, First Prize of Hubei Challenge Cup (湖北省挑战杯一等奖)
+  - date_start: "2018-09-01"
+    title: 2018, Second Class Scholarship, Wuhan University
+  - date_start: "2017-09-01"
+    title: 2017, Second Class Scholarship, Wuhan University
 
 design:
   columns: '2'

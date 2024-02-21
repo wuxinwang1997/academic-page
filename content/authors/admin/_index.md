@@ -70,6 +70,10 @@ email: 'wuxinwang@nudt.edu.cn'
 highlight_name: true
 ---
 
-I am a Ph.D student of computer science at the Institute of Meteorological and Oceanic Numerical Simulation, National University of Defense Technology. My research interests include data assimilation, machine learning and spatial-temporal forecasting. 
+I am a Ph.D student of computer science at the Institute of Meteorological and Oceanic Numerical Simulation, National University of Defense Technology, advised by Prof. [Kaijun Ren](https://www.researchgate.net/profile/Kaijun-Ren). I am now woring on **AI for Earth**. For example, deep learning-based data assimilation, and weather forecasting big models.
+
+I won the Lei Jun Scholarship of Wuhan Univerisity (School of Remote Sensing and Information Engineering, Class of 2016, Top 1) in 2019.
+
+My research interests include spatial-temporal forecasting, data assimilation, and deep learning. I have published 5 papers in top journals and conferences.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
