@@ -8,7 +8,7 @@ authors:
 - Jingze Lu
 - Kaijun Ren
 - Taikang Yuan
-- Wuxin Wang
+- admin
 tags: []
 categories: []
 date: '2024-01-01'
