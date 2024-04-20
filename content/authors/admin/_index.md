@@ -74,6 +74,6 @@ I am a Ph.D student of computer science at the Institute of Meteorological and O
 
 I won the Lei Jun Scholarship of Wuhan Univerisity (School of Remote Sensing and Information Engineering, Class of 2016, Top 1) in 2019.
 
-My research interests include spatial-temporal forecasting, data assimilation, and deep learning. I have published 5 papers in top journals and conferences.
+My research interests include spatial-temporal forecasting, data assimilation, and deep learning. I have published 6 papers in top journals and conferences.
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
